@@ -1,0 +1,18 @@
+<h2>{{model.artist.name}}</h2>
+
+<dl>
+	<dt>Based In</dt>
+	<dd>{{model.artist.based_in}}</dd>
+	<dt>Founding Year</dt>
+	<dd>{{model.artist.founding_year}}</dd>
+</dl>
+
+<h3>Albums</h3>
+
+<ul>
+	{{#each model.albums as |album|}}
+		<li>{{#link-to "album" album.id}}{{album.name}}{{/link-to}}</li>
+	{{else}}
+		<li>There are no albums to display.</li>
+	{{/each}}
+</ul>
