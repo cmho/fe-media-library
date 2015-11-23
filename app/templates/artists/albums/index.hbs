@@ -1,9 +1,0 @@
-<h2>Albums</h2>
-
-<ul>
-	{{#each model as |album|}}
-		<li>{{#link-to "albums.album" album.id}}{{album.name}}{{/link-to}}</li>
-	{{else}}
-		<li>No albums to display.</li>
-	{{/each}}
-</ul>

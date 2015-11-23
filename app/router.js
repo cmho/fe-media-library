@@ -8,11 +8,7 @@ var Router = Ember.Router.extend({
 Router.map(function() {
 	this.route('index', {path: '/'});
 	this.route('artists', function () {
-		this.route('artist', {path: '/:artist_id'}, function () {
-			this.route('albums', function () {
-				this.route('album', {path: '/:album_id'});
-			});
-		});
+		this.route('artist', {path: '/:artist_id'});
 	});
 });
 
