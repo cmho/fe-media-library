@@ -5,5 +5,5 @@ export default DS.Model.extend({
 	based_in: DS.attr('string'),
 	founding_year: DS.attr('number'),
 	updated_at: DS.attr('date'),
-	album_ids: DS.hasMany('album'),
+	album_ids: DS.attr(),
 });

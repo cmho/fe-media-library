@@ -9,10 +9,4 @@
 
 <h3>Albums</h3>
 
-<ul>
-	{{#each model.albums as |album|}}
-		<li>{{#link-to "album" album.id}}{{album.name}}{{/link-to}}</li>
-	{{else}}
-		<li>There are no albums to display.</li>
-	{{/each}}
-</ul>
+{{artist-album-list albums=model.artist.album_ids}}
